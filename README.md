@@ -5,7 +5,7 @@ A fluent cache library for PHP.
 [![Build Status](https://api.travis-ci.org/PHPFluent/Cache.png)](https://travis-ci.org/PHPFluent/Cache)
 
 Usage:
-
+  ```php
   use PHPFluent\Cache\Cache;
   /**
    * @var Doctrine\Common\Cache\Cache $doctrine
@@ -19,3 +19,4 @@ Usage:
    echo $cache['foo'];
 
    unset($cache['foo']);//Deleting the cache
+   ```
