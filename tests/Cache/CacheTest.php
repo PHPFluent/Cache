@@ -1,6 +1,10 @@
 <?php
 namespace Cache;
-require_once '../src/Cache.php';
+
+require_once '../vendor/autoload.php';
+
+use \PHPFluent\Cache\Cache;
+
 class CacheTest extends \PHPUnit_Framework_TestCase
 {
 	public function testShouldReturnFooKey()
@@ -22,7 +26,7 @@ class CacheTest extends \PHPUnit_Framework_TestCase
 			 ->method('delete')
 			 ->will($this->returnValue(true));
 
-		$cache = new \Fluent\Cache($mock);
+		$cache = new Cache($mock);
 		$this->assertTrue(isset($cache['foo']));
 		$this->assertEquals('bar', $cache['foo']);
 		$cache['foo'] = 'bar';
@@ -47,7 +51,7 @@ class CacheTest extends \PHPUnit_Framework_TestCase
 		$mock->expects($this->any())
 			 ->method('delete')
 			 ->will($this->returnValue(true));
-		$cache = new \Fluent\Cache($mock);
+		$cache = new Cache($mock);
 		$this->assertTrue(isset($cache['baz']));
 		$this->assertEquals('weRock', $cache['baz']);
 		$cache['baz'] = 'weRock';
