@@ -1,5 +1,5 @@
 {
-    "name": "PHPFluent\/Cache",
+    "name": "phpfluent\/cache",
     "description": "A conventional project tool for PHP and git.",
     "version": "0.1",
     "type": "library",
