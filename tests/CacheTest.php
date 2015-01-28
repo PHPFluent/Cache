@@ -1,8 +1,6 @@
 <?php
 namespace Cache;
 
-require_once '../vendor/autoload.php';
-
 use PHPFluent\Cache\Cache;
 
 class CacheTest extends \PHPUnit_Framework_TestCase

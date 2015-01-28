@@ -1,11 +1,14 @@
 <?php
 namespace PHPFluent\Cache;
 
-class Cache implements \ArrayAccess
+use ArrayAccess;
+use Doctrine\Common\Cache\Cache as DoctrineCache;
+
+class Cache implements ArrayAccess
 {
     private $cache;
 
-    public function __construct(\Doctrine\Common\Cache\Cache $cache)
+    public function __construct(DoctrineCache $cache)
     {
         $this->cache = $cache;
     }
