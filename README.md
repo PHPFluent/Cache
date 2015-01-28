@@ -1,22 +1,32 @@
-Cache
-=====
-
-A fluent cache library for PHP.
+# PHPFluent\Cache
 [![Build Status](https://api.travis-ci.org/PHPFluent/Cache.png)](https://travis-ci.org/PHPFluent/Cache)
 
-Usage:
-  ```php
-  use PHPFluent\Cache\Cache;
-  /**
-   * @var Doctrine\Common\Cache\Cache $doctrine
-   */
-   $doctrine;
+A fluent cache library for PHP built on the shoulders of [Doctrine\Cache](https://github.com/doctrine/cache).
 
-   $cache        = new Cache($doctrine);
-   $cache['foo'] = 'bar'; //Caching the information
+## Installation
 
-   echo isset($cache['foo']);
-   echo $cache['foo'];
+Package is available on [Packagist](https://packagist.org/packages/phpfluent/cache), you can install it
+using [Composer](http://getcomposer.org).
 
-   unset($cache['foo']);//Deleting the cache
-   ```
+```bash
+composer require phpfluent/cache
+```
+
+## Usage
+
+```php
+use PHPFluent\Cache\Cache;
+
+/**
+ * @var Doctrine\Common\Cache\Cache $doctrine
+ */
+$doctrine;
+
+$cache        = new Cache($doctrine);
+$cache['foo'] = 'bar'; //Caching the information
+
+echo isset($cache['foo']);
+echo $cache['foo'];
+
+unset($cache['foo']);//Deleting the cache
+```
