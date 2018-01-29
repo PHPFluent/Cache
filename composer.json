@@ -3,7 +3,7 @@
     "description": "A conventional project tool for PHP and git.",
     "type": "library",
     "homepage": "http://github.com/PHPFluent/Cache",
-    "license": "New BSD",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Kinn Coelho Julião",
