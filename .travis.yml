@@ -23,6 +23,9 @@ script:
   - vendor/bin/phpunit --colors
 
 matrix:
+  include:
+    - php: 5.3
+      dist: precise
   allow_failures:
     - php: hhvm
     - php: hhvm-nightly
